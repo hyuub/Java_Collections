@@ -5,23 +5,28 @@ public class Komputer implements Comparable<Komputer>
 {
     
     int id;
-    String nazwa;
-    double wartosc;
+    String name;
+    double price;
 
     public Komputer() {
     }
 
     public Komputer(int id, String nazwa, double wartosc) {
         this.id = id;
-        this.nazwa = nazwa;
-        this.wartosc = wartosc;
+        this.name = nazwa;
+        this.price = wartosc;
     }
     
     public void Show()
     {
-        System.out.println("Id: " + id + "  Nazwa: " + nazwa + "    Wartosc: " + wartosc);
+        System.out.println("ID: " + id + "  Name: " + name + "    Price: " + price);
     }
 
+    public double getPrice()
+    {
+        return price;
+    }
+    
     @Override
     public int compareTo(Komputer o) {
         
