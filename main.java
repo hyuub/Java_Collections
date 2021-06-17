@@ -7,25 +7,31 @@ public class main {
 
     public static void main(String[] args) {
        
-        Magazyn magazyn = new Magazyn();
+        Shop shop = new Shop();
         
-        magazyn.add(3, "Xing", 2000);
-        magazyn.add(1, "Asus", 5000);
-        magazyn.add(2, "Xing", 2000);
-        magazyn.add(0, "Dell", 4999);
+        Computer Msi = new Computer("Msi", 5000);
+        Computer Dell = new Computer("Dell", 3500);
+        Computer Acer = new Computer("Acer", 3999);
         
-        magazyn.Show();
-      
-        System.out.println("------------------- \n");
-        magazyn.remove(2);
+        Computer Okap = new Computer("Okap", 3999);
         
-        magazyn.Show();
+        shop.add(Msi);
+        shop.add(Acer);
+        shop.add(Dell);
         
-        System.out.println("------------------- \n");
+        System.out.println("--- Sorted by name ---");
+        shop.sortByName();
         
-        magazyn.changeSort();
+        System.out.println("--- Sorted by price ---");
+        shop.sortByPrice();
         
-        magazyn.Show();
+        shop.remove(Dell);
+        
+        System.out.println("--- Sorted by name ---");
+        shop.sortByName();
+        
+        System.out.println("--- Sorted by price ---");
+        shop.sortByPrice();
       
     }
     
