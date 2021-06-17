@@ -15,8 +15,15 @@ public class main {
         magazyn.add(0, "Dell", 4999);
         
         magazyn.Show();
-        
+      
+        System.out.println("------------------- \n");
         magazyn.remove(2);
+        
+        magazyn.Show();
+        
+        System.out.println("------------------- \n");
+        
+        magazyn.changeSort();
         
         magazyn.Show();
       
